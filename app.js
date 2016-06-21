@@ -4,8 +4,8 @@ var engines = require('consolidate');
 var path = require('path');
 var app = express();
 
-//app.use(favicon(__dirname + '/favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
+//app.use(favicon(__dirname + '/img/favicon.ico'));
 app.set('views', __dirname + '/views');
 app.engine('html', engines.mustache);
 app.set('view engine', 'html');
